@@ -26,7 +26,7 @@ const projects = [
     {
         title: 'Portfolio',
         desc: 'Portfolio website with React',
-        techName: 'JavaScript React',
+        techName: 'JavaScript React Tailwind CSS',
         projectLink: 'https://github.com/ssuniie/Portfolio'
     },
     {

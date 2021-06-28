@@ -20,9 +20,6 @@ export default function Footer() {
                 <a href="https://www.github.com/ssuniie" rel="noopener noreferrer" target="_blank">
                     <img src='/images/github.png' alt='https://www.github.com/ssuniie'/>
                 </a>
-                <a href="https://phatsanphon-27638.web.app/" rel="noopener noreferrer" target="_blank">
-                    Site with SSL Certification
-                </a>
             </div>
         </div>
     )
