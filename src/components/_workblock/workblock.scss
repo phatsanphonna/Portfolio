@@ -1,0 +1,39 @@
+.WorkBlock {
+    background-color: #2e4879;
+
+    width: 300px;
+    height: 300px;
+
+    padding: 18px;
+
+    .icon {
+        align-items: center;
+        justify-content: center;
+
+        h4 {
+            align-items: right;
+            padding-left: 5px;
+            color: #8faff0;
+        }
+
+        button {
+            margin: 6px;
+        }
+    }
+
+    .content {
+        p {
+            font-size: 15px;
+            color: #d7e2f8;
+        }
+    }
+
+    .tech {
+        padding-top: 20px;
+        color: #a4b6d8;
+        
+        p {
+            font-size: small;
+        }
+    }
+}
