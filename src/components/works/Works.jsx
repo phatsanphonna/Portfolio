@@ -12,7 +12,7 @@ const projects = [
     },
     {
         title: 'osu! 中文 V1',
-        desc: 'osu! 中文 V1 osu! skin by ssuniie/Meiilin',
+        desc: '中文 V1 osu! skin by ssuniie/Meiilin',
         techName: 'Photoshop',
         projectLink: 'https://github.com/ssuniie/osuZHV1'
     },
@@ -50,7 +50,7 @@ export default function Works() {
     return (
         <div className="Works">
             <h2 className='font-semibold'>Feature Works</h2>
-            <div className="featured md:flex">
+            <div className="featured grid mx-auto lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-4">
                 {projectElements}
             </div>
         </div>

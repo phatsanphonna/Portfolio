@@ -6,7 +6,7 @@ export default function WorkBlock(props) {
 
     return (
         <a href={projectLink} rel="noopener noreferrer" target="_blank">
-            <div className="WorkBlock py-1 px-2 rounded-md shadow hover:bg-blue-800">
+            <div className="WorkBlock py-1 px-2 rounded-md shadow hover:bg-blue-800 mx-auto">
                 <div className="icon inline-flex">
                     <img src='/images/docs.png' alt={title} />
                     <h4 className=''>{title}</h4>
