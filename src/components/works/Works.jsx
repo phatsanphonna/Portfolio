@@ -14,7 +14,7 @@ const projects = [
         title: 'osu! 中文 V1',
         desc: '中文 V1 osu! skin by ssuniie/Meiilin',
         techName: 'Photoshop',
-        projectLink: 'https://github.com/ssuniie/osuZHV1'
+        projectLink: 'https://ssuniie.github.io/osuZHV1/'
     },
     {
         title: 'MTE',
