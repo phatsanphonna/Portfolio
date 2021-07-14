@@ -7,7 +7,7 @@ const projects = [
         title: 'Logker',
         desc: ('Logker is a logging bot suitable for small to mid-size server range. '
             + 'Support both Thai and English!'),
-        techName: 'Python discord.py',
+        techName: 'Python | discord.py',
         projectLink: 'https://github.com/ssuniie/Logker'
     },
     {
@@ -20,14 +20,20 @@ const projects = [
         title: 'MTE',
         desc: ('Modded Teleporting Experience suitable for '
             + 'who wants to play with friends and make a little bit easy to play.'),
-        techName: 'Java Spigot',
+        techName: 'Java | Spigot',
         projectLink: 'https://github.com/ssuniie/MTE'
     },
     {
         title: 'Portfolio',
         desc: 'Portfolio website with React',
-        techName: 'JavaScript React Tailwind CSS',
+        techName: 'JavaScript | React | Tailwind CSS',
         projectLink: 'https://github.com/ssuniie/Portfolio'
+    },
+    {
+        title: 'COVID-19 Site',
+        desc: 'Show daily cases of COVID-19',
+        techName: 'JavaScript | Next | Tailwind CSS',
+        projectLink: 'https://covid19.phatsanphon.site'
     },
     {
         title: 'Sleep Calculator',

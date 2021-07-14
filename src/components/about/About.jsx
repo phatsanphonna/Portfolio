@@ -14,7 +14,7 @@ export default function About() {
             </div>
             <div className="image">
                 <img src="/images/profile512.png"
-                    alt="" className='w-16 md:w-32 lg:w-48' />
+                    alt="" className='w-32 md:ml-14 lg:w-48 mx-auto' />
             </div>
         </div>
     )
