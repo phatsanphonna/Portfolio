@@ -33,7 +33,19 @@ const projects = [
         title: 'COVID-19 Site',
         desc: 'Show daily cases of COVID-19',
         techName: 'JavaScript | Next | Tailwind CSS',
-        projectLink: 'https://covid19.phatsanphon.site'
+        projectLink: 'https://github.com/ssuniie/COVID-19-Site'
+    },
+    {
+        title: 'COVID-19 Widget for iOS',
+        desc: 'widget that show daily cases of COVID-19',
+        techName: 'JavaScript',
+        projectLink: 'https://github.com/ssuniie/COVID-19-Scriptable'
+    },
+    {
+        title: 'Music overlay with Snip',
+        desc: 'Cool music overlay with Snip',
+        techName: 'HTML | CSS | JavaScript',
+        projectLink: 'https://github.com/ssuniie/music-overlay-with-Snip'
     },
     {
         title: 'Sleep Calculator',
