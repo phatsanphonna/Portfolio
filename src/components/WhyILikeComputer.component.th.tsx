@@ -26,7 +26,7 @@ const PhotoCredit = styled.p`
   font-weight: 100;
 `
 
-export default function Header() {
+const WhyILikeComputer = () => {
   return (
     <Screen className='flex flex-col justify-center item-center min-h-screen' id='WhyILikeComputer'>
       <Content>
@@ -39,8 +39,8 @@ export default function Header() {
 
         <StaticImage src='../images/whyilikecom.jpg'
           alt='This is me too! 😎'
-          className='rounded-2xl w-64 md:w-64 lg:w-1/2 shadow-lg' style={{ margin: '60px' }}
-          placeholder='dominantColor' quality='75' />
+          className='rounded-2xl w-64 md:w-80 lg:w-1/2 shadow-lg' style={{ margin: '60px' }}
+          placeholder='dominantColor' quality={75} />
         <PhotoCredit className='text-sm md:text-md lg:text-lg translate-x-12'>
           เราไม่มีรูปตอนเล่นเกมอ่ะ เอารูปนี้ไปก่อนและกันนะ
         </PhotoCredit>
@@ -48,3 +48,5 @@ export default function Header() {
     </Screen>
   )
 }
+
+export default WhyILikeComputer

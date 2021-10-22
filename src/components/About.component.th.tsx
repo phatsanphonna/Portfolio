@@ -3,7 +3,7 @@ import { StaticImage } from 'gatsby-plugin-image'
 import styled from 'styled-components'
 
 const Screen = styled.div`
-  min-height: calc(100vh + 60px);
+  min-height: 100vh;
 `
 
 const Content = styled.div`
@@ -25,8 +25,7 @@ const Paragraph = styled.p`
 const PhotoCredit = styled.p`
   font-weight: 100;
 `
-
-export default function Header() {
+const About = () => {
   return (
     <Screen className='flex flex-col justify-center item-center min-h-screen' id='About'>
       <Content>
@@ -40,12 +39,14 @@ export default function Header() {
 
         <StaticImage src='../images/pfp.jpg'
           alt='This is me too! 😎'
-          className='rounded-2xl w-64 md:w-64 lg:w-1/2 shadow-lg' style={{ margin: '60px' }}
-          placeholder='dominantColor' quality='75' />
+          className='rounded-2xl w-64 md:w-80 lg:w-1/2 shadow-lg' style={{ margin: '60px' }}
+          placeholder='dominantColor' quality={75} />
         <PhotoCredit className='text-sm md:text-md lg:text-lg translate-x-12'>
           รูปนี้ถ่ายโดยน้อนไมล์สุดน่ารักที่หอศิลป์กรุงเทพฯ
-          </PhotoCredit>
+        </PhotoCredit>
       </Content>
     </Screen>
   )
 }
+
+export default About

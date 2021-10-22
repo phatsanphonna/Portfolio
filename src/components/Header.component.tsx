@@ -21,7 +21,7 @@ const EnglishName = styled.h3`
   margin: 5px;
 `
 
-export default function Header() {
+const Header = () => {
   return (
     <Screen className='flex flex-col justify-center item-center min-h-screen'>
       <Content>
@@ -31,3 +31,5 @@ export default function Header() {
     </Screen>
   )
 }
+
+export default Header

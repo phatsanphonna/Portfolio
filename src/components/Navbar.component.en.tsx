@@ -1,6 +1,5 @@
 import { Link as ScrollLink } from 'react-scroll'
 import { Link } from 'gatsby'
-
 import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
 
@@ -31,10 +30,10 @@ const UlLi = styled.li`
   font-weight: 400;
 `
 
-export default function Navbar() {
+const Navbar = () => {
   const mobileBreakpoint = 950;
 
-  const [logo, setLogo] = useState(logoEN)
+  const [logo] = useState(logoEN)
   const [toggleMenu, setToggleMenu] = useState(false)
   const [screenWidth, setScreenWidth] = useState(
     typeof window !== "undefined" ? window.innerWidth : mobileBreakpoint)
@@ -63,20 +62,20 @@ export default function Navbar() {
         {
           (toggleMenu || screenWidth > mobileBreakpoint) && (<ul className='list'>
             <UlLi className='items transition-all hover:text-gray-300'>
-              <Link to='/en/#About'><ScrollLink to="About" spy={true} smooth={true}>
-                About Me</ScrollLink></Link>
+              <ScrollLink to="About" spy={false} smooth={true}>
+                About Me</ScrollLink>
             </UlLi>
             <UlLi className='items transition-all hover:text-gray-300'>
-              <Link to='/en/#DifferentsInMe'><ScrollLink to="DifferentsInMe" spy={true} smooth={true}>
-                Me with Different Things</ScrollLink></Link>
+              <ScrollLink to="DifferentsInMe" spy={false} smooth={true}>
+                Me with Different Things</ScrollLink>
             </UlLi>
             <UlLi className='items transition-all hover:text-gray-300'>
-              <Link to='/en/#Projects'><ScrollLink to='Projects' smooth={true}>
-                My Works</ScrollLink></Link>
+              <ScrollLink to='Projects' spy={false} smooth={true}>
+                My Works</ScrollLink>
             </UlLi>
             <UlLi className='items transition-all text-red-500 hover:text-red-700' style={{ fontWeight: 600 }}>
-              <a href='https://phatsanphon.site'>
-                ภาษาไทย</a>
+              <Link to='../'>
+                ภาษาไทย</Link>
             </UlLi>
           </ul>)
         }
@@ -86,3 +85,5 @@ export default function Navbar() {
     </NavbarDiv >
   )
 }
+
+export default Navbar

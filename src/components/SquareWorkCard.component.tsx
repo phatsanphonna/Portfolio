@@ -15,7 +15,14 @@ const Title = styled.h3`
   font-weight: 600;
   margin-bottom: 12px;
 `
-export default function WorkCard({ title, description, link }) {
+interface Props {
+  title: string;
+  description: string;
+  link: string;
+  [key: string]: any;
+}
+
+const WorkCard: React.FC<Props> = ({ title, description, link }: Props) => {
   return (
     <Card className='shadow-md rounded-md'>
       <Title className='text-xl'>{title}</Title>
@@ -28,3 +35,5 @@ export default function WorkCard({ title, description, link }) {
     </Card>
   )
 }
+
+export default WorkCard

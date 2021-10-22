@@ -2,13 +2,13 @@ import React from "react"
 import styled from 'styled-components'
 import { Helmet } from 'react-helmet'
 
-import Navbar from "../components/Navbar.th"
-import Header from "../components/Header"
-import About from '../components/About.th'
-import DifferentsInMe from '../components/DiffrerentsInMe.th'
-import WhyILikeComputer from '../components/WhyILikeComputer.th'
-import Works from '../components/Works.th'
-import Footer from '../components/Footer.th'
+import Navbar from "../components/Navbar.component.en"
+import Header from "../components/Header.component"
+import About from '../components/About.component.en'
+import DifferentsInMe from '../components/DiffrerentsInMe.component.en'
+import Works from '../components/Works.component.en'
+
+import Footer from '../components/Footer.component.en'
 
 import thumbnail from '../images/thumbnail.png'
 
@@ -30,7 +30,7 @@ const Hr = styled.hr`
   padding: 0;
 
 `
-export default function Home() {
+const Home = () => {
   return (
     <>
       <Helmet>
@@ -42,6 +42,7 @@ export default function Home() {
         />
         <meta name='twitter:card' content='summary_large_image' />
         <meta property='og:image' content={thumbnail} />
+        <meta name="theme-color" content="#cccccc"></meta>
         <link rel="icon" type="image/png" href="../../static/favicon.ico" />
       </Helmet>
 
@@ -53,11 +54,11 @@ export default function Home() {
         <Hr />
         <DifferentsInMe />
         <Hr />
-        <WhyILikeComputer />
-        <Hr />
         <Works />
       </Screen>
       <Footer />
     </>
   )
 }
+
+export default Home

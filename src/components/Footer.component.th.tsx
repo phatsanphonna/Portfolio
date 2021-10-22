@@ -5,7 +5,6 @@ import facebook from '../images/social-media/facebook.svg'
 import instagram from '../images/social-media/instagram.svg'
 import github from '../images/social-media/github.svg'
 
-
 const FooterDiv = styled.footer`
   background-color: #eeeeee;
   height: 80px;
@@ -36,11 +35,11 @@ const Credit = styled.h3`
   font-weight: 400;
 `
 
-export default function Footer() {
+const Footer = () => {
   return (
     <FooterDiv>
       <Credit className='text-xs md:text-base'>
-        Site created by Phatsanphon Nakaranurak (It's me! 😊)
+        สร้างสรรค์เว็บนี้โดย ภัทร์สรรพ์พร นครานุรักษ์ (เค้าเองยังไงหล่ะ 😊)
       </Credit>
       <SocialMedia>
         <a
@@ -68,3 +67,5 @@ export default function Footer() {
     </FooterDiv>
   )
 }
+
+export default Footer

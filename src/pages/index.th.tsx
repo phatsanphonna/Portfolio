@@ -2,13 +2,13 @@ import React from "react"
 import styled from 'styled-components'
 import { Helmet } from 'react-helmet'
 
-import Navbar from "../components/Navbar.en"
-import Header from "../components/Header"
-import About from '../components/About.en'
-import DifferentsInMe from '../components/DiffrerentsInMe.en'
-import Works from '../components/Works.en'
-
-import Footer from '../components/Footer.en'
+import Navbar from "../components/Navbar.component.th"
+import Header from "../components/Header.component"
+import About from '../components/About.component.th'
+import DifferentsInMe from '../components/DiffrerentsInMe.component.th'
+import WhyILikeComputer from '../components/WhyILikeComputer.component.th'
+import Works from '../components/Works.component.th'
+import Footer from '../components/Footer.component.th'
 
 import thumbnail from '../images/thumbnail.png'
 
@@ -30,7 +30,7 @@ const Hr = styled.hr`
   padding: 0;
 
 `
-export default function Home() {
+const Home = () => {
   return (
     <>
       <Helmet>
@@ -43,6 +43,8 @@ export default function Home() {
         <meta name='twitter:card' content='summary_large_image' />
         <meta property='og:image' content={thumbnail} />
         <link rel="icon" type="image/png" href="../../static/favicon.ico" />
+        <meta name="theme-color" content="#cccccc"></meta>
+        <script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossOrigin="anonymous"></script>
       </Helmet>
 
       <Navbar />
@@ -53,9 +55,13 @@ export default function Home() {
         <Hr />
         <DifferentsInMe />
         <Hr />
+        <WhyILikeComputer />
+        <Hr />
         <Works />
       </Screen>
       <Footer />
     </>
   )
 }
+
+export default Home

@@ -26,7 +26,7 @@ const PhotoCredit = styled.p`
   font-weight: 100;
 `
 
-export default function Header() {
+const About = () => {
   return (
     <Screen className='flex flex-col justify-center item-center min-h-screen' id='About'>
       <Content>
@@ -34,18 +34,20 @@ export default function Header() {
         <Paragraph className='text-lg md:text-xl lg:text-2xl translate-x-12'>
           All of my works came from the fact that I have learned the subject called "Technology Design" In the fifth grade
           It is a course that allows to try to write a program. Then I really enjoyed it. I can build anything that I want to create.
-          For example, write a simple program to rename the file name in the same way, so I try to study coding with myself. 
+          For example, write a simple program to rename the file name in the same way, so I try to study coding with myself.
           and feel very fun. I can do it without bored. So I want this area to be a space for displaying my little works.
         </Paragraph>
 
         <StaticImage src='../images/pfp.jpg'
           alt='This is me too! 😎'
-          className='rounded-2xl w-64 md:w-64 lg:w-1/2 shadow-lg' style={{ margin: '60px' }}
-          placeholder='dominantColor' quality='75' />
+          className='rounded-2xl w-64 md:w-80 lg:w-1/2 shadow-lg' style={{ margin: '60px' }}
+          placeholder='dominantColor' quality={75} />
         <PhotoCredit className='text-sm md:text-md lg:text-lg translate-x-12'>
           This photo was taken by N' Mile with her cuties at BACC.
-          </PhotoCredit>
+        </PhotoCredit>
       </Content>
     </Screen>
   )
 }
+
+export default About

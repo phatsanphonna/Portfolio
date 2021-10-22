@@ -31,10 +31,10 @@ const UlLi = styled.li`
   font-weight: 400;
 `
 
-export default function Navbar() {
+const Navbar = () => {
   const mobileBreakpoint = 950;
 
-  const [logo, setLogo] = useState(logoEN)
+  const [logo] = useState(logoEN)
   const [toggleMenu, setToggleMenu] = useState(false)
   const [screenWidth, setScreenWidth] = useState(
     typeof window !== "undefined" ? window.innerWidth : mobileBreakpoint)
@@ -63,20 +63,20 @@ export default function Navbar() {
         {
           (toggleMenu || screenWidth > mobileBreakpoint) && (<ul className='list'>
             <UlLi className='items transition-all hover:text-gray-300'>
-              <Link to='/#About'><ScrollLink to="About" spy={true} smooth={true}>
-                เกี่ยวกับตัวเราเอง</ScrollLink></Link>
+              <ScrollLink to="About" spy={false} smooth={true}>
+                เกี่ยวกับตัวเราเอง</ScrollLink>
             </UlLi>
             <UlLi className='items transition-all hover:text-gray-300'>
-              <Link to='/#DifferentsInMe'><ScrollLink to="DifferentsInMe" spy={true} smooth={true}>
-                ความแตกต่างในตัวเรา</ScrollLink></Link>
+              <ScrollLink to="DifferentsInMe" spy={false} smooth={true}>
+                ความแตกต่างในตัวเรา</ScrollLink>
             </UlLi>
             <UlLi className='items transition-all hover:text-gray-300'>
-              <Link to='/#WhyILikeComputer'><ScrollLink to="WhyILikeComputer" spy={true} smooth={true}>
-                ทำไมเราถึงชอบคอมพิวเตอร์</ScrollLink></Link>
+              <ScrollLink to="WhyILikeComputer" spy={false} smooth={true}>
+                ทำไมเราถึงชอบคอมพิวเตอร์</ScrollLink>
             </UlLi>
             <UlLi className='items transition-all hover:text-gray-300'>
-              <Link to='/#Projects'><ScrollLink to='Projects' spy={true} smooth={true}>
-                ผลงานของเรา</ScrollLink></Link>
+              <ScrollLink to='Projects' spy={false} smooth={true}>
+                ผลงานของเรา</ScrollLink>
             </UlLi>
             <UlLi className='items transition-all text-blue-500 hover:text-blue-700' style={{ fontWeight: 600 }}>
               <Link to='/en'>
@@ -90,3 +90,5 @@ export default function Navbar() {
     </NavbarDiv>
   )
 }
+
+export default Navbar
