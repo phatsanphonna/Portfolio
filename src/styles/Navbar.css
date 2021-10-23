@@ -25,10 +25,13 @@
         width: 100%;
         padding: 200px 0px;
         background-color: #eeeeee;
-
     }
 
     .btn {
         display: block;
+    }
+
+    .logo {
+        z-index: 99999;
     }
 }

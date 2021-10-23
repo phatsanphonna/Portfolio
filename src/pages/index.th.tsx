@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState, useEffect } from "react"
 import styled from 'styled-components'
 import { Helmet } from 'react-helmet'
 
@@ -31,8 +31,19 @@ const Hr = styled.hr`
 
 `
 const Home = () => {
+  const [windowHeight, setWindowHeight] = useState(
+    typeof window !== "undefined" ? window.innerHeight : 0)
+
+  useEffect(() => {
+    const handleResize = () => setWindowHeight(window.innerHeight)
+
+    window.addEventListener('resize', handleResize, true)
+
+    return () => window.addEventListener('resize', handleResize, true)
+  }, [])
+
   return (
-    <>
+    <div>
       <Helmet>
         <meta charSet="utf-8" />
         <title>Phatsanphon Nakaranurak</title>
@@ -51,16 +62,16 @@ const Home = () => {
       <Screen>
         <Header />
         <Hr />
-        <About />
+        <About windowHeight={windowHeight} />
         <Hr />
-        <DifferentsInMe />
+        <DifferentsInMe windowHeight={windowHeight} />
         <Hr />
-        <WhyILikeComputer />
+        <WhyILikeComputer windowHeight={windowHeight} />
         <Hr />
-        <Works />
+        <Works windowHeight={windowHeight} />
       </Screen>
       <Footer />
-    </>
+    </div>
   )
 }
 

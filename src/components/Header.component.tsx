@@ -1,14 +1,11 @@
 import React from 'react'
 import styled from 'styled-components'
 
+import Content from '../layouts/Content.layout'
+
 const Screen = styled.div`
   min-height: 100vh;
   background-color: #ffffff;
-`
-
-const Content = styled.div`
-  display: grid;
-  place-items: center;
 `
 
 const Title = styled.h1`

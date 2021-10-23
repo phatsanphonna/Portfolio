@@ -1,27 +1,16 @@
 import React from 'react'
 import styled from 'styled-components'
 
+import Content from '../layouts/Content.layout'
+import Title from '../layouts/Title.layout'
+import Paragraph from '../layouts/Paragraph.layout'
+
 import { projectsTH } from '../texts/project'
 import Card from './SquareWorkCard.component'
 
+
 const Screen = styled.div`
   min-height: 100vh;
-`
-
-const Content = styled.div`
-  display: grid;
-  place-items: center;
-`
-
-const Title = styled.h1`
-  font-weight: 500;
-  margin: 15px 0px;
-`
-
-const Paragraph = styled.p`
-  font-weight: 300;
-  padding: 0px 12px;
-  text-indent: 1em;
 `
 
 const Grid = styled.div`
@@ -36,8 +25,8 @@ const Works = () => {
   return (
     <Screen className='flex flex-col justify-center item-center min-h-screen' id='Projects'>
       <Content>
-        <Title className='text-3xl md:text-4xl lg:text-5xl translate-x-12'>My Works</Title>
-        <Paragraph className='text-lg md:text-xl lg:text-2xl translate-x-12'>
+        <Title>My Works</Title>
+        <Paragraph>
           This is my featured works. Work that I choose to this components, I like them all.
           Logker is my the most favorite project at all.
         </Paragraph>

@@ -34,7 +34,7 @@ const UlLi = styled.li`
 const Navbar = () => {
   const mobileBreakpoint = 950;
 
-  const [logo] = useState(logoEN)
+  const [logo, _] = useState(logoEN)
   const [toggleMenu, setToggleMenu] = useState(false)
   const [screenWidth, setScreenWidth] = useState(
     typeof window !== "undefined" ? window.innerWidth : mobileBreakpoint)
@@ -54,9 +54,10 @@ const Navbar = () => {
       window.removeEventListener('resize', changeWidth)
     }
   }, [])
+  
   return (
     <NavbarDiv>
-      <a href='https://phatsanphon.site'>
+      <a href='https://phatsanphon.site' className='logo' >
         <img src={logo} alt="Logo" className='w-56 md:w-64 lg:w-72' />
       </a>
       <nav>
