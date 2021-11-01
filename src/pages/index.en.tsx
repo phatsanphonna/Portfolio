@@ -1,6 +1,8 @@
-import React from "react"
+import React, { useEffect } from "react"
 import styled from 'styled-components'
 import { Helmet } from 'react-helmet'
+import Aos from 'aos'
+import 'aos/dist/aos.css'
 
 import Navbar from "../components/Navbar.component.en"
 import Header from "../components/Header.component"
@@ -31,6 +33,17 @@ const Hr = styled.hr`
 
 `
 const Home = () => {
+
+  useEffect(() => {
+    Aos.init({
+      disable: 'mobile',
+      duration: 500,
+      offset: 400,
+      easing: 'ease',
+      once: true
+    })
+  })
+
   return (
     <>
       <Helmet>
@@ -48,13 +61,28 @@ const Home = () => {
 
       <Navbar />
       <Screen>
-        <Header />
+        <div data-aos='fade-up'>
+          <Header />
+        </div>
+
         <Hr />
-        <About />
+
+        <div data-aos='fade-up'>
+          <About />
+        </div>
+
         <Hr />
-        <DifferentsInMe />
+
+        <div data-aos='fade-up'>
+          <DifferentsInMe />
+        </div>
+
         <Hr />
-        <Works />
+
+        <div data-aos='fade-up'>
+          <Works />
+        </div>
+
       </Screen>
       <Footer />
     </>

@@ -1,7 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
+import { motion } from 'framer-motion'
 
-const Card = styled.div`
+const Card = styled(motion.div)`
   width: 300px;
   height: 250px;
 
@@ -19,18 +20,19 @@ interface Props {
   title: string;
   description: string;
   link: string;
-  [key: string]: any;
 }
 
 const WorkCard: React.FC<Props> = ({ title, description, link }: Props) => {
   return (
-    <Card className='shadow-md rounded-md'>
+    <Card className='shadow-md rounded-md' whileHover={{ scale: 1.05, transition: { type: 'spring', duration: 0.2 } }}>
       <Title className='text-xl'>{title}</Title>
       <p>
         {description}
       </p>
-      <a href={link}>
-        <button className='px-2 py-1 bg-gray-100 rounded-sm my-5 text-black font-medium'>ดูเพิ่มเติม</button>
+      <a href={link} rel="noopener noreferrer" target="_blank">
+        <button className='px-2 py-1 bg-gray-100 rounded-sm my-5 text-black font-medium' >
+          GitHub
+        </button>
       </a>
     </Card>
   )

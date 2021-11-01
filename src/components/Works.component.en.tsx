@@ -1,20 +1,21 @@
 import React from 'react'
 import styled from 'styled-components'
+import { motion } from 'framer-motion'
 
 import Content from '../layouts/Content.layout'
 import Title from '../layouts/Title.layout'
 import Paragraph from '../layouts/Paragraph.layout'
 
-import { projectsTH } from '../texts/project'
 import Card from './SquareWorkCard.component'
 
+import { projectsTH } from '../texts/project'
 
 const Screen = styled.div`
   min-height: 100vh;
 `
 
 const Grid = styled.div`
-  margin: 60px 0px;
+  margin: 20px 0px;
 `
 
 const Works = () => {
@@ -33,6 +34,13 @@ const Works = () => {
         <Grid className='grid mx-auto lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-2'>
           {projectElements}
         </Grid>
+
+        <a href='https://github.com/ssuniie?tab=repositories' rel="noopener noreferrer" target="_blank">
+          <motion.button className='border-2 rounded-sm border-gray-700 px-3 py-2 m-5 font-medium'
+            whileHover={{ scale: 1.1, transition: { type: 'spring', duration: 0.3 } }}
+          >
+            View more projects on GitHub</motion.button>
+        </a>
       </Content>
     </Screen>
   )

@@ -1,9 +1,17 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
+import { motion } from 'framer-motion'
 
 import facebook from '../images/social-media/facebook.svg'
 import instagram from '../images/social-media/instagram.svg'
 import github from '../images/social-media/github.svg'
+
+import gatsby from '../images/tech/gatsby.svg'
+import firebase from '../images/tech/firebase-icon.svg'
+import framer from '../images/tech/framer-icon.svg'
+import tailwind from '../images/tech/tailwind.svg'
+import styledComp from '../images/tech/styled-comp.png'
+
 
 const FooterDiv = styled.footer`
   background-color: #eeeeee;
@@ -31,16 +39,49 @@ const SocialMediaURL = styled.img`
   margin: 4px 16px;
 `
 
-const Credit = styled.h3`
+const TechPicture = styled.img`
+  display: inline-block;
+  height: 16px;
+  margin: 0px 4px;
+`
+
+const Credit = styled(motion.h3)`
   font-weight: 400;
 `
 
 const Footer = () => {
+  const [isTechCreditShown, setIsTechCreditShown] = useState<Boolean>(false)
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      // console.log(isCreditShown)
+
+      setIsTechCreditShown(!isTechCreditShown)
+    }, 5000)
+
+    return () => clearInterval(interval)
+  }, [isTechCreditShown])
+
   return (
     <FooterDiv>
-      <Credit className='text-xs md:text-base'>
-        สร้างสรรค์เว็บนี้โดย ภัทร์สรรพ์พร นครานุรักษ์ (เค้าเองยังไงหล่ะ 😊)
-      </Credit>
+      {!isTechCreditShown ? (
+        <Credit className='text-xs md:text-base'>
+          สร้างสรรค์เว็บนี้โดย ภัทร์สรรพ์พร นครานุรักษ์ (เค้าเองยังไงหล่ะ 😊)
+        </Credit>
+      ) : (
+        <Credit className='text-xs md:text-base' style={{ display: 'inline-block' }}>
+          <span>
+            พัฒนาเว็บนี้ด้วย{' '}
+            <TechPicture src={gatsby} />
+            <TechPicture src={tailwind} />
+            <TechPicture src={styledComp} />
+            <TechPicture src={framer} />
+            <TechPicture src={firebase} />
+          </span>
+        </Credit>
+      )
+      }
+
       <SocialMedia>
         <a
           href="https://www.facebook.com/SSUNIIE12"
@@ -64,7 +105,7 @@ const Footer = () => {
           <SocialMediaURL src={github} alt="https://www.github.com/ssuniie" />
         </a>
       </SocialMedia>
-    </FooterDiv>
+    </FooterDiv >
   )
 }
 

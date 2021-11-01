@@ -3,6 +3,7 @@ import { Link } from 'gatsby'
 
 import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
+import { motion } from 'framer-motion'
 
 import '../styles/Navbar.css'
 
@@ -24,7 +25,7 @@ const NavbarDiv = styled.header`
   z-index: 100;
 `
 
-const UlLi = styled.li`
+const UlLi = styled(motion.li)`
   display: inline-block;
   padding: 0px 20px;
 
@@ -32,16 +33,12 @@ const UlLi = styled.li`
 `
 
 const Navbar = () => {
-  const mobileBreakpoint = 950;
+  const mobileBreakpoint = 1300;
+  const hoverText = { scale: 1.1, transition: { type: 'spring', duration: 0.01 } }
 
   const [logo, _] = useState(logoEN)
-  const [toggleMenu, setToggleMenu] = useState(false)
   const [screenWidth, setScreenWidth] = useState(
     typeof window !== "undefined" ? window.innerWidth : mobileBreakpoint)
-
-  const toggleNav = () => {
-    setToggleMenu(!toggleMenu)
-  }
 
   useEffect(() => {
     const changeWidth = () => {
@@ -54,39 +51,48 @@ const Navbar = () => {
       window.removeEventListener('resize', changeWidth)
     }
   }, [])
-  
+
   return (
     <NavbarDiv>
-      <a href='https://phatsanphon.site' className='logo' >
-        <img src={logo} alt="Logo" className='w-56 md:w-64 lg:w-72' />
-      </a>
+      <Link to='/'>
+        <motion.img src={logo} alt="Logo" className='w-64 lg:w-72' whileHover={{ scale: 1.05, transition: { type: 'spring', duration: 0.5 } }} />
+      </Link>
       <nav>
         {
-          (toggleMenu || screenWidth > mobileBreakpoint) && (<ul className='list'>
-            <UlLi className='items transition-all hover:text-gray-300'>
-              <ScrollLink to="About" spy={false} smooth={true}>
-                เกี่ยวกับตัวเราเอง</ScrollLink>
-            </UlLi>
-            <UlLi className='items transition-all hover:text-gray-300'>
-              <ScrollLink to="DifferentsInMe" spy={false} smooth={true}>
-                ความแตกต่างในตัวเรา</ScrollLink>
-            </UlLi>
-            <UlLi className='items transition-all hover:text-gray-300'>
-              <ScrollLink to="WhyILikeComputer" spy={false} smooth={true}>
-                ทำไมเราถึงชอบคอมพิวเตอร์</ScrollLink>
-            </UlLi>
-            <UlLi className='items transition-all hover:text-gray-300'>
-              <ScrollLink to='Projects' spy={false} smooth={true}>
-                ผลงานของเรา</ScrollLink>
-            </UlLi>
-            <UlLi className='items transition-all text-blue-500 hover:text-blue-700' style={{ fontWeight: 600 }}>
+          (screenWidth > mobileBreakpoint) ? (
+            <ul className='list'>
+              <UlLi className='items transition-all' whileHover={hoverText}>
+                <ScrollLink to="About" spy={false} smooth={true}>
+                  เกี่ยวกับตัวเราเอง</ScrollLink>
+              </UlLi>
+              <UlLi className='items transition-all' whileHover={hoverText}>
+                <ScrollLink to="DifferentsInMe" spy={false} smooth={true}>
+                  ความแตกต่างในตัวเรา</ScrollLink>
+              </UlLi>
+              <UlLi className='items transition-all' whileHover={hoverText}>
+                <ScrollLink to="WhyILikeComputer" spy={false} smooth={true}>
+                  ทำไมเราถึงชอบคอมพิวเตอร์</ScrollLink>
+              </UlLi>
+              <UlLi className='items transition-all' whileHover={hoverText}>
+                <ScrollLink to='Projects' spy={false} smooth={true}>
+                  ผลงานของเรา</ScrollLink>
+              </UlLi>
+              <UlLi className='items transition-all text-blue-500 hover:text-blue-700'
+                style={{ fontWeight: 600 }}
+                whileHover={hoverText}>
+                <Link to='/en'>
+                  English</Link>
+              </UlLi>
+            </ul>
+          ) : (
+            <UlLi className='items transition-all text-blue-500 hover:text-blue-700'
+              style={{ fontWeight: 600 }}
+              whileHover={hoverText}>
               <Link to='/en'>
                 English</Link>
             </UlLi>
-          </ul>)
+          )
         }
-
-        <button className='btn' onClick={toggleNav}>...</button>
       </nav>
     </NavbarDiv>
   )

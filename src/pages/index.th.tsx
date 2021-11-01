@@ -1,6 +1,8 @@
-import React, { useState, useEffect } from "react"
+import React, { useEffect } from "react"
 import styled from 'styled-components'
 import { Helmet } from 'react-helmet'
+import Aos from 'aos'
+import 'aos/dist/aos.css'
 
 import Navbar from "../components/Navbar.component.th"
 import Header from "../components/Header.component"
@@ -31,19 +33,21 @@ const Hr = styled.hr`
 
 `
 const Home = () => {
-  const [windowHeight, setWindowHeight] = useState(
-    typeof window !== "undefined" ? window.innerHeight : 0)
 
   useEffect(() => {
-    const handleResize = () => setWindowHeight(window.innerHeight)
-
-    window.addEventListener('resize', handleResize, true)
-
-    return () => window.addEventListener('resize', handleResize, true)
-  }, [])
+    Aos.init(
+      {
+        disable: 'mobile',
+        duration: 500,
+        offset: 400,
+        easing: 'ease',
+        once: true
+      }
+    )
+  })
 
   return (
-    <div>
+    <>
       <Helmet>
         <meta charSet="utf-8" />
         <title>Phatsanphon Nakaranurak</title>
@@ -60,18 +64,36 @@ const Home = () => {
 
       <Navbar />
       <Screen>
-        <Header />
+        <div data-aos='fade-up'>
+          <Header />
+        </div>
+
         <Hr />
-        <About windowHeight={windowHeight} />
+
+        <div data-aos='fade-up'>
+          <About />
+        </div>
+
         <Hr />
-        <DifferentsInMe windowHeight={windowHeight} />
+
+        <div data-aos='fade-up'>
+          <DifferentsInMe />
+        </div>
+
         <Hr />
-        <WhyILikeComputer windowHeight={windowHeight} />
+
+        <div data-aos='fade-up'>
+          <WhyILikeComputer />
+        </div>
+
         <Hr />
-        <Works windowHeight={windowHeight} />
+
+        <div data-aos='fade-up'>
+          <Works />
+        </div>
       </Screen>
       <Footer />
-    </div>
+    </>
   )
 }
 

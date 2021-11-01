@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import { StaticImage } from 'gatsby-plugin-image'
 import styled from 'styled-components'
-import CSS from 'csstype'
 
 import Content from '../layouts/Content.layout'
 import Title from '../layouts/Title.layout'
@@ -15,35 +14,9 @@ const PhotoCredit = styled.p`
   font-weight: 100;
 `
 
-interface Props {
-  windowHeight: number
-}
-
-const DifferentsInMe: React.FC<Props> = ({ windowHeight }: Props) => {
-  const SCROLL_BREAKPOINT = (windowHeight * 2) + 200
-  const [viewportHeight, setViewportHeight] = useState(0)
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setViewportHeight((windowHeight) + window.scrollY)
-      // console.log({
-      //   scrollY: window.scrollY,
-      //   viewportHeight: (windowHeight) + window.scrollY,
-      //   windowHeight,
-      //   SCROLL_BREAKPOINT
-      // })
-    }
-
-    window.addEventListener('scroll', handleScroll, true)
-
-    return () => window.addEventListener('scroll', handleScroll, true)
-  }, [])
-
-  let fadeInAnimation: CSS.Properties = { opacity: viewportHeight >= SCROLL_BREAKPOINT ? 1 : 0 }
-
+const DifferentsInMe: React.FC = () => {
   return (
     <Screen className='flex flex-col justify-center item-center min-h-screen' id='DifferentsInMe'>
-      <div style={fadeInAnimation}>
         <Content>
           <Title>ความแตกต่างในตัวเรา</Title>
           <Paragraph>
@@ -61,7 +34,6 @@ const DifferentsInMe: React.FC<Props> = ({ windowHeight }: Props) => {
           <PhotoCredit className='text-sm md:text-md lg:text-lg translate-x-12'>
             รูปนี้ถ่ายโดยน้อนไมล์สุดน่ารักอีกเช่นเคยที่หอศิลป์กรุงเทพฯ เราชอบรูปนี้มาก ๆ</PhotoCredit>
         </Content>
-      </div>
     </Screen>
   )
 }
