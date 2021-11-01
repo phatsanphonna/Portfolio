@@ -31,7 +31,10 @@ const WhyILikeComputer: React.FC = () => {
           placeholder='dominantColor' quality={75} />
 
         <PhotoCredit className='text-sm md:text-md lg:text-lg translate-x-12'>
-          นี่เป็นโค้ดของเว็บนี้แหล่ะ ไปดูได้ที่ <a href='https://github.com/ssuniie/Portfolio' rel="noopener noreferrer" target="_blank">GitHub</a> ได้เลย
+          นี่เป็นโค้ดของเว็บนี้แหล่ะ ไปดูได้ที่{' '}
+          <a className='underline'
+            href='https://github.com/ssuniie/Portfolio'
+            rel="noopener noreferrer" target="_blank">GitHub</a> ได้เลย
         </PhotoCredit>
       </Content>
     </Screen>

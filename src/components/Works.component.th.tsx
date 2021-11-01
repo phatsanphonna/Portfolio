@@ -38,6 +38,7 @@ const Works: React.FC = () => {
         <a href='https://github.com/ssuniie?tab=repositories' rel="noopener noreferrer" target="_blank">
           <motion.button className='border-2 rounded-sm border-gray-700 px-3 py-2 m-5 font-medium'
             whileHover={{ scale: 1.1, transition: { type: 'spring', duration: 0.3 } }}
+            whileTap={{ scale: 1.1, transition: { type: 'spring', duration: 0.3 } }}
           >
             ดูโปรเจคเพิ่มเติมที่ GitHub</motion.button>
         </a>
