@@ -55,7 +55,12 @@ const Navbar = () => {
   return (
     <NavbarDiv>
       <Link to='/'>
-        <motion.img src={logo} alt="Logo" className='w-64 lg:w-72' whileHover={{ scale: 1.05, transition: { type: 'spring', duration: 0.5 } }} />
+        <motion.img
+          src={logo}
+          alt="Logo"
+          className='w-64 lg:w-72'
+          whileHover={{ scale: 1.05, transition: { type: 'spring', duration: 0.5 } }}
+          whileTap={{ scale: 1.05, transition: { type: 'spring', duration: 0.5 } }} />
       </Link>
       <nav>
         {

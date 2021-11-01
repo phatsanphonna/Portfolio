@@ -24,7 +24,11 @@ interface Props {
 
 const WorkCard: React.FC<Props> = ({ title, description, link }: Props) => {
   return (
-    <Card className='shadow-md rounded-md' whileHover={{ scale: 1.05, transition: { type: 'spring', duration: 0.2 } }}>
+    <Card
+      className='shadow-md rounded-md'
+      whileHover={{ scale: 1.05, transition: { type: 'spring', duration: 0.2 } }}
+      whileTap={{ scale: 1.05, transition: { type: 'spring', duration: 0.2 } }}
+    >
       <Title className='text-xl'>{title}</Title>
       <p>
         {description}

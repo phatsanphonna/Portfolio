@@ -25,7 +25,7 @@ const Header = () => {
   return (
     <Screen className='flex flex-col justify-center item-center min-h-screen'>
       <Content>
-        <Title className='tracking-widest text-2xl md:text-4xl lg:text-7xl' whileHover={hoverText}>ภัทร์สรรพ์พร นครานุรักษ์</Title>
+        <Title className='tracking-widest text-2xl md:text-4xl lg:text-7xl' whileHover={hoverText} whileTap={hoverText}>ภัทร์สรรพ์พร นครานุรักษ์</Title>
         <EnglishName className='tracking-widest text-lg md:text-2xl lg:text-4xl'>Phatsanphon Nakaranurak</EnglishName>
       </Content>
     </Screen>
