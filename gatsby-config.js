@@ -8,7 +8,7 @@ module.exports = {
   /* Your site config here */
   siteMetadata: {
     title: 'Phatsanphon Nakaranurak',
-    description: 'Portfolio of Phatsanphon Nakaranurak',
+    description: 'Portfolio of Phatsanphon Nakaranurak, High school student, Wannabe kid to be a Programmer. This kid old dream\'s job is a diplomat.',
   },
   plugins: [
     `gatsby-plugin-styled-components`, 'gatsby-plugin-postcss', `gatsby-plugin-react-helmet`,

@@ -53,13 +53,12 @@ const Home = () => {
         <title>Phatsanphon Nakaranurak</title>
         <meta
           name="description"
-          content="Portfolio of Phatsanphon Nakaranurak"
+          content="Portfolio of Phatsanphon Nakaranurak, High school student, Wannabe kid to be a Programmer. This kid old dream's job is a diplomat."
         />
         <meta name='twitter:card' content='summary_large_image' />
         <meta property='og:image' content={thumbnail} />
-        <link rel="icon" type="image/png" href="../../static/favicon.ico" />
+        <link rel="icon" href="favicon.ico" />
         <meta name="theme-color" content="#cccccc"></meta>
-        <script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossOrigin="anonymous"></script>
       </Helmet>
 
       <Navbar />
