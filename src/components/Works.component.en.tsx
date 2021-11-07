@@ -7,8 +7,7 @@ import Title from '../layouts/Title.layout'
 import Paragraph from '../layouts/Paragraph.layout'
 
 import Card from './SquareWorkCard.component'
-
-import { projectsTH } from '../texts/project'
+import { projectsEN } from '../texts/project'
 
 const Screen = styled.div`
   min-height: 100vh;
@@ -19,7 +18,7 @@ const Grid = styled.div`
 `
 
 const Works = () => {
-  const projectElements = projectsTH.map((project, index) => {
+  const projectElements = projectsEN.map((project, index) => {
     return <Card key={index}
       title={project.title} description={project.desc} link={project.projectLink} />
   })
