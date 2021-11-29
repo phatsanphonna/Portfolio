@@ -8,7 +8,7 @@ const Layout = styled.p`
 `
 
 interface Props {
-    children: string
+    children: string | JSX.Element | JSX.Element[]
 }
 
 const Paragraph = ({ children }: Props) => {

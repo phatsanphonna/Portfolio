@@ -3,6 +3,7 @@ export const projectsEN = [
         title: "Logker",
         desc: `Logker is a logging bot suitable for small to mid-size server range. Support both Thai and English!`,
         projectLink: "https://github.com/ssuniie/Logker",
+        bgPicture: `https://media.discordapp.net/attachments/810939530898309181/909020588826312754/unknown.png`
     },
     {
         title: "MTE",
@@ -43,6 +44,7 @@ export const projectsTH = [
         desc: `Logker คือ บอทเก็บประวัติสำหรับเซิฟเวอร์ Discord ของคุณ เหมาะกับเซิฟเวอร์ขนาดเล็กถึงขนาดกลาง 
       รองรับทั้งภาษาไทย และ ภาษาอังกฤษ`,
         projectLink: "https://github.com/ssuniie/Logker",
+        bgPicture: `https://media.discordapp.net/attachments/810939530898309181/909020588826312754/unknown.png`
     },
     {
         title: "MTE",

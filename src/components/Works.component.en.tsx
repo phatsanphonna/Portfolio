@@ -20,7 +20,7 @@ const Grid = styled.div`
 const Works = () => {
   const projectElements = projectsEN.map((project, index) => {
     return <Card key={index}
-      title={project.title} description={project.desc} link={project.projectLink} />
+      title={project.title} description={project.desc} link={project.projectLink} bgPicture={project.bgPicture!} />
   })
   return (
     <Screen className='flex flex-col justify-center item-center min-h-screen' id='Projects'>

@@ -20,7 +20,7 @@ const Grid = styled.div`
 const Works: React.FC = () => {
   const projectElements = projectsTH.map((project, index) => {
     return <Card key={index}
-      title={project.title} description={project.desc} link={project.projectLink} />
+      title={project.title} description={project.desc} link={project.projectLink} bgPicture={project.bgPicture!} />
   })
 
   return (

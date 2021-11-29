@@ -52,14 +52,19 @@ const Navbar = () => {
   }, [])
   return (
     <NavbarDiv>
-      <Link to='/'>
+      <ScrollLink to="Index" spy={false} smooth={true}>
         <motion.img
           src={logo}
           alt="Logo"
           className='w-64 lg:w-72'
           whileHover={{ scale: 1.05, transition: { type: 'spring', duration: 0.5 } }}
           whileTap={{ scale: 1.05, transition: { type: 'spring', duration: 0.5 } }} />
-      </Link>
+
+        {/* <motion.h1
+          className='w-64 lg:w-72'
+          whileHover={{ scale: 1.05, transition: { type: 'spring', duration: 0.5 } }}
+          whileTap={{ scale: 1.05, transition: { type: 'spring', duration: 0.5 } }}>Phatsanphon Nakaranurak</motion.h1> */}
+      </ScrollLink>
       <nav>
         {
           (screenWidth > mobileBreakpoint) ? (

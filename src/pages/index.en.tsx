@@ -38,7 +38,6 @@ const Home = () => {
     Aos.init({
       disable: 'mobile',
       duration: 500,
-      offset: 400,
       easing: 'ease',
       once: true
     })
