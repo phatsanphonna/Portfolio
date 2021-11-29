@@ -52,7 +52,7 @@ const Home = () => {
         <title>Phatsanphon Nakaranurak</title>
         <meta
           name="description"
-          content="Portfolio of Phatsanphon Nakaranurak, High school student, Wannabe kid to be a Programmer. This kid old dream's job is a diplomat."
+          content="Portfolio of Phatsanphon Nakaranurak, High school student, Wannabe kid to be a Programmer."
         />
         <meta name='twitter:card' content='summary_large_image' />
         <meta property='og:image' content={thumbnail} />

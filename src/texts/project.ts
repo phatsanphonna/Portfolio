@@ -14,8 +14,8 @@ export const projectsEN = [
     },
     {
         title: "Portfolio",
-        desc: "Portfolio website with React",
-        techName: "JavaScript | React | Tailwind CSS",
+        desc: "Portfolio website with Gatsby.js (React)",
+        techName: "JavaScript | Gatsby.js | Tailwind CSS",
         projectLink: "https://github.com/ssuniie/Portfolio",
     },
     {
@@ -33,7 +33,7 @@ export const projectsEN = [
     {
         title: "Quote of the requests",
         desc: "Random jokes when you are out of joke in your head.",
-        techName: "JavaScript | Next | Tailwind CSS",
+        techName: "JavaScript | Next.js | Tailwind CSS",
         projectLink: "https://github.com/ssuniie/QuoteOfTheRequests",
     },
 ]
@@ -54,8 +54,8 @@ export const projectsTH = [
     },
     {
         title: "Portfolio",
-        desc: "Portfolio website with React",
-        techName: "JavaScript | React | Tailwind CSS",
+        desc: "เว็บไซต์ Portfolio สร้างด้วย Gatsby.js (React)",
+        techName: "JavaScript | Gatsby.js | Tailwind CSS",
         projectLink: "https://github.com/ssuniie/Portfolio",
     },
     {
@@ -65,15 +65,15 @@ export const projectsTH = [
         projectLink: "https://github.com/ssuniie/COVID-19-Scriptable",
     },
     {
-        title: "Music overlay with Snip",
-        desc: "Cool music overlay with Snip",
-        techName: "HTML | CSS | JavaScript",
-        projectLink: "https://github.com/ssuniie/music-overlay-with-Snip",
+        title: "Quote of the requests",
+        desc: "เว็บสุ่มคำคมเวลาที่คิดมุกไม่ออก",
+        techName: "JavaScript | Next.js | Tailwind CSS",
+        projectLink: "https://github.com/ssuniie/QuoteOfTheRequests",
     },
     {
-        title: "Quote of the requests",
-        desc: "Random jokes when you are out of joke in your head.",
-        techName: "JavaScript | Next | Tailwind CSS",
-        projectLink: "https://github.com/ssuniie/QuoteOfTheRequests",
+        title: "HSK Flashcards",
+        desc: "สุ่มคำศัพท์ทั้งหมดของการสอบ HSK",
+        techName: "JavaScript | Vue.js | Firebase | Tailwind CSS",
+        projectLink: "https://github.com/ssuniie/hsk-flashcards",
     },
 ]
